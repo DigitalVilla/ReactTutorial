@@ -3,6 +3,7 @@
 # React Tutorial
 > A simple Application to study React basics. 
 
+![](screen.png)
 #### Setup 
     * Install Node.js 
     * Install VS Code
@@ -31,4 +32,4 @@
     * Click event with onClick
     * STATE regularFunc vs arrowFunc
     * Loop rendering JS map &  key
-    * STATE management
+    * STATE management JS filter 
