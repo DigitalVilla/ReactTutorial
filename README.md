@@ -1,9 +1,10 @@
-
-
-# React Tutorial
+# React Tutorial - Part 2
 > A simple Application to study React basics. 
-
 ![](screen.png)
+
+<hr>
+  
+> Part 1:  (Branch: React_Basics)
 #### Setup 
     * Install Node.js 
     * Install VS Code
@@ -33,3 +34,11 @@
     * STATE regularFunc vs arrowFunc
     * Loop rendering JS map &  key
     * STATE management JS filter 
+<hr>
+
+> Part 2
+#### Advanced STATE
+    * Refractor
+    * Context API
+    * Provider / Consumer
+    * Context Reducer
