@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Header from './components/Header'
-import Contacts from './components/Contacts'
-import {Provider} from './Context'
+import Header from './react/components/Header'
+import Contacts from './react/components/Contacts'
+import {Provider} from './react/Context'
 
 class App extends Component {
 

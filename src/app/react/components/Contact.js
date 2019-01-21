@@ -35,7 +35,9 @@ class Contact extends Component {
                     
                     return (
                         <div className="contact">
-                            <h3>{name}
+                            <h3>
+                                <i onClick={this.toggleShowInfo.bind(this, name)} className="fas fa-edit" style={{fontSize: "16px",marginRight:"8px"}}/>
+                                {name}
                                 <i onClick={this.toggleShowInfo.bind(this, name)} className="fas fa-sort-down" />
                                 <i onClick={this.deleteHandler.bind(this, id, dispatch)} className="fas fa-times" />
                             </h3>

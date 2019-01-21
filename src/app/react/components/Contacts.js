@@ -1,7 +1,7 @@
 import React from 'react'
 import Contact from './Contact'
+import NewContact from './NewContact'
 import { Consumer } from '../Context'
-import NewContact from '../components/NewContact'
 
 const Contacts = () => {
     return (

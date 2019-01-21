@@ -44,3 +44,6 @@
     * Context Reducer
     * Form & State
     * ControlledComponent & onChange
+    * Reducer & Dispatcher
+    * Error check & Validation
+    
