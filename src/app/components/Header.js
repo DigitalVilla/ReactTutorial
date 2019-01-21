@@ -1,15 +1,27 @@
 import React from 'react'
-
+import {Consumer} from '../Context'
 const Header = (props) => {
-    const Styles = {
-        // color: "#f0F",
-        // fontFamily: "Arial"
+
+    const showForm = (dispatch,e) => {
+        dispatch({type:'SHOW_FORM', payload:true})
     }
 
     return (
-        <header>
-            <h1 style={Styles}> {props.text || 'Header'}</h1>
-        </header>
+        <Consumer>
+            {value => {
+                const {dispatch} = value;
+                return (
+                    <header>
+                        <div className="container">
+                            <h1> {props.text || 'Header'}</h1>
+                            <button onClick={showForm.bind(this, dispatch)}>
+                                <i className="fas fa-plus-circle" style={{color:"#eee"}}/>
+                            </button>
+                        </div>
+                    </header>
+                )
+            }}
+        </Consumer>
     )
 }
 

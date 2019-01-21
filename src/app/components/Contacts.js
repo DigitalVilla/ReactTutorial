@@ -1,14 +1,16 @@
 import React from 'react'
 import Contact from './Contact'
 import { Consumer } from '../Context'
+import NewContact from '../components/NewContact'
 
 const Contacts = () => {
     return (
         <Consumer>
             {value => {
-                const { contacts } = value;
+                const { contacts, newContact } = value;
                 return (
                     <React.Fragment>
+                        {newContact && <NewContact />}
                         {
                             contacts.map((cont) => {
                                 return (<Contact key={cont.id}
