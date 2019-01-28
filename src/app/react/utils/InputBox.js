@@ -2,7 +2,6 @@ import React from 'react'
 import classnames from "classnames";
 
 const InputBox = ({label,name,type,onChange,value,error, placeholder}) => {
-  console.log("input",error);
   
   return (
     <React.Fragment>

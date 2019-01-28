@@ -10,12 +10,12 @@ class Contact extends Component {
         }
     }
 
-    formatPhone(phone) {
-        return phone.split("").map((n, i) => {
-            n = i === 0 ? '(' + n : i === 3 ? ') ' + n : i === 6 ? ' - ' + n : n;
-            return n
-        })
-    }
+    // formatPhone(phone) {
+    //     return phone.split("").map((n, i) => {
+    //         n = i === 0 ? '(' + n : i === 3 ? ') ' + n : i === 6 ? ' - ' + n : n;
+    //         return n
+    //     })
+    // }
  
     toggleShowInfo = (name, e) => {
         this.setState({ showInfo: !this.state.showInfo })
@@ -44,7 +44,7 @@ class Contact extends Component {
                             {this.state.showInfo && (
                                 <ul>
                                     <li>Email: {email}</li>
-                                    <li>Phone: {this.formatPhone(phone + "")}</li>
+                                    <li>Phone: {phone}</li>
                                 </ul>)}
                         </div>
                     )

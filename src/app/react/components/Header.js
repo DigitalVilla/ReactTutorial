@@ -1,23 +1,26 @@
 import React from 'react'
-import {Consumer} from '../Context'
+import { Consumer } from '../Context'
+import { Link } from 'react-router-dom'
 
 const Header = (props) => {
-
-    const showForm = (dispatch,e) => {
-        dispatch({type:'SHOW_FORM', payload:true})
-    }
-
     return (
         <Consumer>
             {value => {
-                const {dispatch} = value;
                 return (
                     <header>
-                        <div className="container">
+                        <div className="container flexCenter">
                             <h1> {props.text || 'Header'}</h1>
-                            <button onClick={showForm.bind(this, dispatch)}>
-                                <i className="fas fa-plus-circle" style={{color:"#eee"}}/>
-                            </button>
+                            <div className="header-links flexCenter">
+                                <Link to="/">
+                                    <i className="fas fa-home" style={{ color: "#eee" }} />
+                                </Link>
+                                <Link to="/other">
+                                    <i className="fas fa-compass" style={{ color: "#eee" }} />
+                                </Link>
+                                <Link to="/about">
+                                    <i className="fas fa-question" style={{ color: "#eee" }} />
+                                </Link>
+                            </div>
                         </div>
                     </header>
                 )

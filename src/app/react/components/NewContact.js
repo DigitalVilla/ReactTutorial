@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Consumer } from '../Context'
 import InputBox from '../utils/InputBox'
 import { isNumber, isEmpty } from '../../js/utility'
+import {withRouter} from 'react-router-dom'
 
 class NewContact extends Component {
     state = {
@@ -42,6 +43,10 @@ class NewContact extends Component {
                 phone: '',
                 errors: {}
             })
+
+            console.log(this.props.history);
+            // this.props.history.push('/about');
+            
         })
     };
 
@@ -74,7 +79,7 @@ class NewContact extends Component {
                     const { dispatch } = value;
                     return (
                         <form className="contact" onSubmit={this.onSubmit.bind(this, dispatch)}>
-                            <h3 className="NewCont">
+                            <h3 className="flexCenter">
                                 <div>
                                     <InputBox error={errors.name} label="Name: " name="name" onChange={this.onChange} value={name} placeholder="Enter Name..." />
                                 </div>
@@ -99,4 +104,4 @@ class NewContact extends Component {
         )
     }
 }
-export default NewContact
+export default withRouter(NewContact);
